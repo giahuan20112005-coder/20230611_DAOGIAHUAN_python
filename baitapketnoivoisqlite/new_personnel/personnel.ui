@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>920</width>
+    <height>560</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Quản lý nhân sự</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QGroupBox" name="groupBoxForm">
+      <property name="title">
+       <string>Thông tin nhân sự</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayoutForm">
+       <item row="0" column="0">
+        <widget class="QLabel" name="labelCCCD">
+         <property name="text">
+          <string>CCCD:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="lineEditCCCD"/>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="labelFullName">
+         <property name="text">
+          <string>Họ và tên:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="lineEditFullName"/>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="labelBirthDate">
+         <property name="text">
+          <string>Ngày sinh:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="lineEditBirthDate"/>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="labelGender">
+         <property name="text">
+          <string>Giới tính:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QComboBox" name="comboBoxGender">
+         <item>
+          <property name="text">
+           <string>Nam</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Nữ</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Khác</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="labelAddress">
+         <property name="text">
+          <string>Địa chỉ:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QPlainTextEdit" name="plainTextEditAddress"/>
+       </item>
+       <item row="5" column="0" colspan="2">
+        <layout class="QHBoxLayout" name="horizontalLayoutButtons">
+         <item>
+          <widget class="QPushButton" name="pushButtonAdd">
+           <property name="text">
+            <string>Thêm mới</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButtonUpdate">
+           <property name="text">
+            <string>Cập nhật</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButtonDelete">
+           <property name="text">
+            <string>Xóa</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButtonClear">
+           <property name="text">
+            <string>Clear</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBoxSearch">
+      <property name="title">
+       <string>Tìm kiếm</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayoutSearch">
+       <item row="0" column="0">
+        <widget class="QLabel" name="labelSearchCCCD">
+         <property name="text">
+          <string>CCCD:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="lineEditSearchCCCD"/>
+       </item>
+       <item row="0" column="2">
+        <widget class="QLabel" name="labelSearchName">
+         <property name="text">
+          <string>Tên:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="3">
+        <widget class="QLineEdit" name="lineEditSearchName"/>
+       </item>
+       <item row="0" column="4">
+        <widget class="QLabel" name="labelSearchAddress">
+         <property name="text">
+          <string>Địa chỉ:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="5">
+        <widget class="QLineEdit" name="lineEditSearchAddress"/>
+       </item>
+       <item row="0" column="6">
+        <widget class="QPushButton" name="pushButtonSearch">
+         <property name="text">
+          <string>Tìm kiếm</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="7">
+        <widget class="QPushButton" name="pushButtonRefresh">
+         <property name="text">
+          <string>Xem tất cả</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBoxTable">
+      <property name="title">
+       <string>Danh sách nhân sự</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayoutTable">
+       <item>
+        <widget class="QTableWidget" name="tableWidget">
+         <column>5</column>
+         <property name="alternatingRowColors">
+          <bool>false</bool>
+         </property>
+         <property name="selectionBehavior">
+          <enum>QAbstractItemView::SelectRows</enum>
+         </property>
+         <property name="selectionMode">
+          <enum>QAbstractItemView::SingleSelection</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
